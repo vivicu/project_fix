@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-info" (click)="onNewLuar()">Tambah Daftar</button>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-luar-item
+      *ngFor="let luarEL of luars; let i = index"
+      [luar]="luarEL"
+      [index]="i"></app-luar-item>
+    </div>
+  </div>

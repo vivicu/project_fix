@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-xs-12">
+      <img [src]="dalam.imagePath" alt="{{dalam.name}}" class="img-responsive" style="max-height:300px">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{dalam.name}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="btn-group" appDropdown>
+        <button type="button"
+        class="btn btn-primary dropdown-toggle">
+        Pengaturan <span class="caret"></span>
+        </button>
+      <ul class="dropdown-menu">
+        <li><a style="cursor:pointer;" (click)="onEditDalam()"> Edit Film </a></li>
+        <li><a style="cursor:pointer;" (click)="onDeleteDalam()"> Delete Film </a></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      {{dalam.tahun}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      {{dalam.genre}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      {{dalam.description}}
+    </div>
+  </div>

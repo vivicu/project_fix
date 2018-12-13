@@ -1,0 +1,10 @@
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <!--<app-dalam *ngIf="loadedFeature === 'dalam'"></app-dalam>
+      <app-luar *ngIf="loadedFeature !== 'dalam'"></app-luar>-->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

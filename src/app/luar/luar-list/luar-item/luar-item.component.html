@@ -1,0 +1,14 @@
+<a style="cursor:pointer;"
+[routerLink]="[index]"
+routerLinkActive="active"
+class="list-group-item clearfix">
+      <span class="pull-left">
+        <img [src]="luar.imagePath" alt="{{luar.name}}" class="img-responsive" style="max-height:100px">
+      </span>
+      <div class="pull-right">
+        <h4 class="list-group-item-heading">{{luar.name}}</h4>
+        <p class="list-group-item-text">{{luar.tahun}}</p>
+        <p class="list-group-item-text">{{luar.genre}}</p>
+        <p class="list-group-item-text">{{luar.description}}</p>
+      </div>
+</a>

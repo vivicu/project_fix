@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-info" (click)="onNewDalam()">Tambah Daftar</button>
+    <hr>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-dalam-item
+    *ngFor="let dalamEL of dalams; let i = index"
+    [dalam]="dalamEL"
+    [index]="i"></app-dalam-item>
+  </div>
+</div>
