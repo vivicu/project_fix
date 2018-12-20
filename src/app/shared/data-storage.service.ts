@@ -13,11 +13,8 @@ export class DataStorageService {
 
   storeDalams() {
     return this.http.put('https://film-435e4.firebaseio.com/dalams.json',
-    this.dalamService.getDalams());
-  }
-
-  storeLuars() {
-    return this.http.put('https://film-435e4.firebaseio.com/luars.json',
+    this.dalamService.getDalams()),
+    this.http.put('https://film-435e4.firebaseio.com/luar.json',
     this.luarService.getLuars());
   }
 
@@ -36,15 +33,15 @@ export class DataStorageService {
   }
 
   getLuars() {
-    this.http.get('https://film-435e4.firebaseio.com/dalams.json')
+    this.http.get('https://film-435e4.firebaseio.com/luar.json')
     .map(
       (response: Response) => {
-        const luars: Luar[] = response.json();
-        return luars;
+        const luar: Luar[] = response.json();
+        return luar;
       })
     .subscribe(
-      (luars: Luar[]) => {
-        this.luarService.setLuars(luars);
+      (luar: Luar[]) => {
+        this.luarService.setLuars(luar);
       }
     );
   }
